@@ -1,0 +1,7 @@
+node_modules/       # зависимости npm
+.vscode/            # настройки VS Code
+.idea/              # настройки IntelliJ IDEA
+.env                # переменные окружения
+dist/               # собранные файлы
+.DS_Store           # файлы macOS
+*.log               # логи
