@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Петрострой монтаж - строительство и ремонт кровель, утепление фасадов, благоустройство территорий в Бобруйске. Более 20 лет опыта.">
+    <meta name="description" content="Петрострой монтаж - строительство и ремонт кровель, утепление фасадов, благоустройство территории, производство водосточных систем и тротуарной плитки в Бобруйске.">
     <meta name="keywords" content="строительство, ремонт кровель, утепление фасадов, водосточные системы, тротуарная плитка, Бобруйск">
     <meta name="author" content="Петрострой монтаж">
     <meta property="og:title" content="Петрострой монтаж - Строительные и монтажные работы">
-    <meta property="og:description" content="Профессиональные услуги строительства, ремонта и монтажа в Бобруйске. Кровли, фасады, благоустройство.">
+    <meta property="og:description" content="Профессиональные услуги строительства, ремонта и монтажа в Бобруйске.">
     <meta property="og:type" content="business.business">
     <meta property="og:url" content="https://petrostroy-montazh.by">
-    <meta property="og:image" content="https://petrostroy-montazh.by/images/og-image.jpg">
     <title>Петрострой монтаж | Строительство и ремонт кровель в Бобруйске</title>
     <link rel="canonical" href="https://petrostroy-montazh.by">
     <link rel="stylesheet" href="css/style.css">
@@ -19,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -27,37 +27,70 @@
                     <span class="logo-icon">🏗️</span>
                     <span class="logo-text">Петрострой<small>монтаж</small></span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+
+                <button class="hamburger" id="hamburger" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#services" onclick="closeMenu()">Услуги</a></li>
+                    <li><a href="#about" onclick="closeMenu()">О нас</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Контакты</a></li>
                 </ul>
-                <button class="contact-btn" onclick="scrollToContact()">Заказать</button>
+
+                <div class="nav-right">
+                    <button class="theme-btn" id="theme-btn" aria-label="Сменить тему" title="Сменить тему">🌙</button>
+                    <button class="contact-btn" onclick="scrollToContact()">Заказать</button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-eyebrow">Бобруйск · 20+ лет опыта</span>
-                <h1>Строим.<br><span>Монтируем.</span><br>Гарантируем.</h1>
-                <p>Профессиональные строительные и монтажные работы. Кровли, фасады, водосточные системы — с гарантией качества на каждом этапе.</p>
+                <span class="hero-eyebrow">Бобруйск · Работаем с 2003 года</span>
+                <h1>Быстро.<br><span>Бюджетно.</span><br>Качественно.</h1>
+
+                <div class="hero-services">
+                    <span class="hero-tag">Кровли</span>
+                    <span class="hero-tag">Фасады</span>
+                    <span class="hero-tag">Водостоки</span>
+                    <span class="hero-tag">Тротуарная плитка</span>
+                    <span class="hero-tag">Бетонные полы</span>
+                    <span class="hero-tag">Благоустройство</span>
+                </div>
+
+                <div class="hero-value">
+                    <div class="hero-val-item">
+                        <span class="hero-val-num">20+</span>
+                        <span class="hero-val-label">лет на рынке</span>
+                    </div>
+                    <div class="hero-val-divider"></div>
+                    <div class="hero-val-item">
+                        <span class="hero-val-num">500+</span>
+                        <span class="hero-val-label">объектов сдано</span>
+                    </div>
+                    <div class="hero-val-divider"></div>
+                    <div class="hero-val-item">
+                        <span class="hero-val-num">без</span>
+                        <span class="hero-val-label">посредников</span>
+                    </div>
+                </div>
+
                 <div class="hero-btns">
-                    <button class="cta-btn" onclick="scrollToContact()">Получить консультацию</button>
+                    <button class="cta-btn" onclick="scrollToContact()">Получить смету</button>
                     <button class="cta-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
-                        Наши услуги →
+                        Все услуги →
                     </button>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll">
-            <div class="scroll-line"></div>
-        </div>
+        <div class="hero-scroll"><div class="scroll-line"></div></div>
     </header>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header reveal">
@@ -69,43 +102,43 @@
                     <span class="service-num">01</span>
                     <span class="service-icon">🏠</span>
                     <h3>Строительство и ремонт кровель</h3>
-                    <p>Профессиональный монтаж, ремонт и обслуживание всех типов кровельных конструкций с гарантией качества.</p>
+                    <p>Монтаж, ремонт и обслуживание всех типов кровельных конструкций. Работаем быстро, без лишних наценок.</p>
                 </div>
                 <div class="service-card reveal stagger-2">
                     <span class="service-num">02</span>
                     <span class="service-icon">🧱</span>
                     <h3>Утепление фасадов</h3>
-                    <p>Современные технологии утепления с использованием качественных материалов для энергосбережения.</p>
+                    <p>Современные технологии утепления с качественными материалами. Экономим ваш бюджет на отоплении.</p>
                 </div>
                 <div class="service-card reveal stagger-3">
                     <span class="service-num">03</span>
                     <span class="service-icon">🌳</span>
                     <h3>Благоустройство территории</h3>
-                    <p>Комплексное озеленение, благоустройство и ландшафтный дизайн придомовых и коммерческих территорий.</p>
+                    <p>Комплексное озеленение и ландшафтный дизайн придомовых и коммерческих территорий.</p>
                 </div>
                 <div class="service-card reveal stagger-4">
                     <span class="service-num">04</span>
                     <span class="service-icon">⚙️</span>
                     <h3>Бетонные и полимерные полы</h3>
-                    <p>Устройство долговечных, надёжных полов для промышленных, коммерческих и жилых помещений.</p>
+                    <p>Долговечные полы для промышленных, коммерческих и жилых помещений. В срок и по смете.</p>
                 </div>
                 <div class="service-card reveal stagger-5">
                     <span class="service-num">05</span>
                     <span class="service-icon">🪨</span>
                     <h3>Производство тротуарной плитки</h3>
-                    <p>Изготовление качественной декоративной тротуарной плитки с различными фактурами и цветовыми решениями.</p>
+                    <p>Собственное производство — никаких посредников. Разные фактуры и цветовые решения.</p>
                 </div>
                 <div class="service-card reveal stagger-6">
                     <span class="service-num">06</span>
                     <span class="service-icon">💧</span>
                     <h3>Водосточные системы</h3>
-                    <p>Производство и монтаж надёжных водосточных систем, обеспечивающих эффективный отвод воды.</p>
+                    <p>Производство и монтаж водосточных систем для эффективного отвода воды.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
@@ -114,8 +147,8 @@
                         <span class="section-eyebrow">Кто мы</span>
                         <h2 class="section-title">О компании</h2>
                     </div>
-                    <p class="reveal-left stagger-1">"Петрострой монтаж" — частное строительное унитарное предприятие с многолетним опытом работы на рынке строительных и монтажных услуг.</p>
-                    <p class="reveal-left stagger-2">Мы выполняем работы на высочайшем уровне, используя качественные материалы и современное оборудование. Каждый проект реализуется с учётом пожеланий клиента и строительных норм.</p>
+                    <p class="reveal-left stagger-1">"Петрострой монтаж" — частное строительное унитарное предприятие. Работаем без посредников: напрямую с клиентом от сметы до сдачи объекта.</p>
+                    <p class="reveal-left stagger-2">Делаем быстро и держим цены. Без раздутых смет и лишних согласований — только работа и результат.</p>
                     <div class="about-divider reveal-left stagger-3"></div>
                     <div class="stats reveal-left stagger-4">
                         <div class="stat">
@@ -127,8 +160,8 @@
                             <span class="stat-label">проектов</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">гарантия</span>
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">посредников</span>
                         </div>
                     </div>
                 </div>
@@ -136,7 +169,12 @@
                     <div class="about-badge">
                         <span class="badge-icon">🏗️</span>
                         <div class="badge-title">Частное строительное унитарное предприятие</div>
-                        <p class="badge-subtitle">Директор: Силков Александр Александрович<br>г. Бобруйск, Республика Беларусь</p>
+                        <p class="badge-subtitle">
+                            Директор: Силков Александр Александрович<br><br>
+                            <strong>УНП</strong> 790627073<br><br>
+                            <strong>Юр. адрес:</strong> 213852, РБ, Могилёвская обл., Бобруйский р-он, д. Ковали, ул. Машерова, д. 2, к. 7<br><br>
+                            <strong>Почт. адрес:</strong> 213805, РБ, Могилёвская обл., г. Бобруйск, пер. Рабочий, 67
+                        </p>
                         <div class="badge-grid">
                             <div class="badge-item">Кровли</div>
                             <div class="badge-item">Фасады</div>
@@ -149,18 +187,18 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-eyebrow">Связаться с нами</span>
+                <span class="section-eyebrow">Пишите или звоните</span>
                 <h2 class="section-title">Контакты</h2>
             </div>
             <div class="contact-content">
                 <div class="contact-info reveal-left">
                     <div class="contact-item">
                         <h3>📞 Телефон</h3>
-                        <p><a href="tel:+37529388-42-24">+375 (29) 388-42-24</a></p>
+                        <p><a href="tel:+375293884224">+375 (29) 388-42-24</a></p>
                     </div>
                     <div class="contact-item">
                         <h3>📧 Email</h3>
@@ -171,12 +209,8 @@
                         <p>Силков Александр Александрович</p>
                     </div>
                     <div class="contact-item">
-                        <h3>🏢 Компания</h3>
-                        <p>Петрострой монтаж<br>Частное строительное унитарное предприятие</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>🏛️ УНП</h3>
-                        <p>790627073</p>
+                        <h3>🏢 Реквизиты</h3>
+                        <p>УНП 790627073</p>
                     </div>
                     <div class="contact-item">
                         <h3>📍 Юридический адрес</h3>
@@ -184,14 +218,14 @@
                     </div>
                     <div class="contact-item">
                         <h3>📬 Почтовый адрес</h3>
-                        <p>213805, РБ, Могилёвская обл., г. Бобруйск, пер Рабочий, 67</p>
+                        <p>213805, РБ, Могилёвская обл., г. Бобруйск, пер. Рабочий, 67</p>
                     </div>
                 </div>
                 <form class="contact-form reveal-right" onsubmit="handleSubmit(event)">
                     <input type="text" placeholder="Ваше имя" required>
                     <input type="email" placeholder="Ваш email" required>
                     <input type="tel" placeholder="Телефон" required>
-                    <textarea placeholder="Описание вашего проекта" rows="5" required></textarea>
+                    <textarea placeholder="Опишите задачу — сделаем смету" rows="5" required></textarea>
                     <button type="submit" class="submit-btn">Отправить запрос</button>
                 </form>
             </div>
@@ -201,34 +235,23 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Петрострой монтаж. Все права защищены.</p>
-            <p class="footer-info">УНП: 790627073 | +375 (29) 388-42-24 | silkov_1969@mail.ru</p>
+            <div class="footer-inner">
+                <p>&copy; 2026 Петрострой монтаж. УНП 790627073</p>
+                <p>+375 (29) 388-42-24 · silkov_1969@mail.ru</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Петрострой монтаж",
-      "image": "https://petrostroy-montazh.by/images/logo.jpg",
       "description": "Профессиональные услуги строительства, ремонта и монтажа",
       "telephone": "+375293884224",
       "email": "silkov_1969@mail.ru",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "ул. Машерова, д. 2, к. 7",
-        "addressLocality": "д. Ковали",
-        "addressRegion": "Бобруйский р-он",
-        "postalCode": "213852",
-        "addressCountry": "BY"
-      },
-      "sameAs": [
-        "https://www.facebook.com/petrostroy-montazh",
-        "https://www.instagram.com/petrostroy-montazh"
-      ],
-      "priceRange": "$$$"
+      "taxID": "790627073",
+      "address": { "@type": "PostalAddress", "addressCountry": "BY", "addressLocality": "Бобруйск" }
     }
     </script>
 
