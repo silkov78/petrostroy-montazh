@@ -137,6 +137,44 @@ const statObserver = new IntersectionObserver((entries) => {
 const statsEl = document.querySelector('.stats');
 if (statsEl) statObserver.observe(statsEl);
 
+// ── Reviews slider ───────────────────────────────────
+(function () {
+    const cards   = document.querySelectorAll('.review-card');
+    const dots    = document.querySelectorAll('.rev-dot');
+    const btnPrev = document.querySelector('.rev-prev');
+    const btnNext = document.querySelector('.rev-next');
+    if (!cards.length) return;
+
+    let current = 0;
+    let timer;
+
+    function goTo(idx) {
+        cards[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (idx + cards.length) % cards.length;
+        cards[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(current + 1), 6500);
+    }
+
+    btnPrev.addEventListener('click', () => { goTo(current - 1); startTimer(); });
+    btnNext.addEventListener('click', () => { goTo(current + 1); startTimer(); });
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => { goTo(i); startTimer(); });
+    });
+
+    // Pause on hover
+    const slider = document.querySelector('.reviews-slider');
+    slider.addEventListener('mouseenter', () => clearInterval(timer));
+    slider.addEventListener('mouseleave', () => startTimer());
+
+    startTimer();
+})();
+
 // ── Animation keyframes ───────────────────────────────
 const style = document.createElement('style');
 style.textContent = `

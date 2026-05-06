@@ -466,6 +466,112 @@ body::before {
 }
 .service-card p { color: var(--text-b); font-size: 0.82rem; line-height: 1.6; font-weight: 300; }
 
+/* ── Reviews ─────────────────────────────────── */
+.reviews {
+    padding: 4rem 0; background-color: var(--bg);
+    position: relative; overflow: hidden; transition: background-color 0.3s;
+}
+@media (min-width:768px) { .reviews { padding: 5rem 0; } }
+
+.reviews-slider {
+    background-color: var(--card); border: 1px solid var(--border);
+    border-radius: 4px; overflow: hidden;
+    box-shadow: 0 4px 32px var(--shadow);
+    position: relative; transition: background-color 0.3s;
+}
+.reviews-slider::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: linear-gradient(90deg, var(--primary), transparent);
+    z-index: 1;
+}
+
+/* All cards in one grid cell — stable height = tallest card */
+.reviews-track {
+    display: grid;
+    grid-template-areas: "slide";
+}
+
+.review-card {
+    grid-area: slide;
+    padding: 2.2rem 2rem 1.8rem;
+    opacity: 0; visibility: hidden;
+    transform: translateY(14px);
+    transition: opacity 0.55s ease, transform 0.55s ease, visibility 0s linear 0.55s;
+    pointer-events: none;
+}
+@media (min-width:640px) { .review-card { padding: 2.8rem 3rem 2.2rem; } }
+
+.review-card.active {
+    opacity: 1; visibility: visible;
+    transform: none;
+    pointer-events: auto;
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.review-top {
+    display: flex; align-items: flex-start;
+    gap: 1.2rem; margin-bottom: 1.4rem;
+}
+
+.review-ql {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem; line-height: 0.75;
+    color: var(--primary); opacity: 0.45;
+    flex-shrink: 0; user-select: none;
+}
+
+.review-info { display: flex; flex-direction: column; gap: 5px; padding-top: 2px; }
+
+.review-company {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-weight: 700;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--text-h); line-height: 1.2; transition: color 0.3s;
+}
+
+.review-date {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--primary);
+}
+.review-date::before { content: ''; width: 14px; height: 1px; background: var(--primary); }
+
+.review-body {
+    font-size: clamp(0.88rem, 1.5vw, 0.96rem);
+    font-weight: 300; line-height: 1.85; color: var(--text-b);
+    transition: color 0.3s;
+}
+.review-body--mt { margin-top: 0.9rem; }
+
+/* Controls */
+.reviews-controls {
+    display: flex; align-items: center; justify-content: center;
+    gap: 1.25rem; padding: 1.1rem 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.rev-arrow {
+    width: 34px; height: 34px; border-radius: 3px;
+    border: 1px solid var(--border); background: none;
+    color: var(--text-b); font-size: 1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+    flex-shrink: 0;
+}
+.rev-arrow:hover { border-color: var(--primary); color: var(--primary); }
+
+.rev-dots { display: flex; gap: 7px; align-items: center; }
+
+.rev-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--border); border: none;
+    cursor: pointer; padding: 0;
+    transition: background 0.25s, transform 0.25s, width 0.25s;
+}
+.rev-dot.active { background: var(--primary); transform: scale(1.35); }
+.rev-dot:hover:not(.active) { background: var(--text-b); }
+
 /* ── About ───────────────────────────────────── */
 .about {
     padding: 4rem 0; background-color: var(--bg);
