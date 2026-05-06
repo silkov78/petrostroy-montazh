@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="accentLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#d4920f" stop-opacity="1"/>
+      <stop offset="55%"  stop-color="#d4920f" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d4920f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1e2636"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentLine)"/>
+
+  <!-- П icon — vertically centred at y=315 (630/2) -->
+  <rect x="118" y="235" width="160" height="160" rx="36" fill="#d4920f"/>
+  <rect x="143" y="260" width="110" height="28" fill="#1e2636"/>
+  <rect x="143" y="260" width="28" height="107" fill="#1e2636"/>
+  <rect x="225" y="260" width="28" height="107" fill="#1e2636"/>
+
+  <!-- Vertical divider -->
+  <rect x="330" y="220" width="1" height="200" fill="#d4920f" fill-opacity="0.35"/>
+
+  <!-- Eyebrow -->
+  <text x="362" y="245"
+        font-family="Sora, Arial, sans-serif"
+        font-size="18" font-weight="600"
+        fill="#d4920f"
+        letter-spacing="6">СТРОИТЕЛЬСТВО · БОБРУЙСК</text>
+
+  <!-- Company name -->
+  <text x="358" y="341"
+        font-family="Sora, Arial, sans-serif"
+        font-size="110" font-weight="700"
+        fill="#f0f2f5"
+        letter-spacing="-3">ПЕТРОСТРОЙ</text>
+
+  <!-- Sub -->
+  <text x="365" y="396"
+        font-family="Sora, Arial, sans-serif"
+        font-size="42" font-weight="400"
+        fill="#d4920f"
+        letter-spacing="18">МОНТАЖ</text>
+</svg>
