@@ -86,7 +86,7 @@ body::before {
 }
 
 .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; cursor: pointer; }
-.logo-icon { font-size: 22px; line-height: 1; }
+.logo-icon { display: block; flex-shrink: 0; }
 .logo-text {
     font-family: 'Sora', sans-serif;
     font-size: 1rem; font-weight: 700;
