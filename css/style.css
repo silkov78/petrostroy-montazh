@@ -349,8 +349,7 @@ body::before {
 .thesis:hover .thesis-title { color: var(--primary); }
 
 .thesis-text {
-    font-size: clamp(0.92rem, 1.5vw, 1.05rem);
-    font-weight: 300;
+    font-size: clamp(0.97rem, 1.6vw, 1.12rem);
     color: var(--text-b); line-height: 1.6;
 }
 .cta-btn {
@@ -415,7 +414,7 @@ body::before {
     position: relative; overflow: hidden; transition: background-color 0.3s;
 }
 .services::before {
-    content: 'УСЛУГИ'; position: absolute; top: 2rem; right: -2rem;
+    content: 'УСЛУГИ'; position: absolute; top: 2rem; left: -2rem;
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(6rem, 18vw, 13rem);
     color: var(--ghost-text); pointer-events: none;
@@ -464,12 +463,19 @@ body::before {
     letter-spacing: 0.05em; text-transform: uppercase;
     margin-bottom: 0.4rem; color: var(--text-h); transition: color 0.3s;
 }
-.service-card p { color: var(--text-b); font-size: 0.82rem; line-height: 1.6; font-weight: 300; }
+.service-card p { color: var(--text-b); font-size: 0.95rem; line-height: 1.6; font-weight: 300; }
 
 /* ── Reviews ─────────────────────────────────── */
 .reviews {
     padding: 4rem 0; background-color: var(--bg);
     position: relative; overflow: hidden; transition: background-color 0.3s;
+}
+.reviews::before {
+    content: 'ОТЗЫВЫ'; position: absolute; top: 2rem; right: -2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(6rem, 18vw, 13rem);
+    color: var(--ghost-text); pointer-events: none;
+    letter-spacing: 0.05em; line-height: 1; user-select: none;
 }
 @media (min-width:768px) { .reviews { padding: 5rem 0; } }
 
@@ -538,7 +544,7 @@ body::before {
 .review-date::before { content: ''; width: 14px; height: 1px; background: var(--primary); }
 
 .review-body {
-    font-size: clamp(0.88rem, 1.5vw, 0.96rem);
+    font-size: clamp(0.96rem, 1.8vw, 1.08rem);
     font-weight: 300; line-height: 1.85; color: var(--text-b);
     transition: color 0.3s;
 }
@@ -595,7 +601,7 @@ body::before {
     letter-spacing: 0.04em; color: var(--text-h); line-height: 1.1;
     margin-bottom: 0.75rem; transition: color 0.3s;
 }
-.badge-subtitle { font-size: 0.85rem; font-weight: 300; color: var(--text-b); line-height: 1.7; }
+.badge-subtitle { font-size: 0.95rem; font-weight: 300; color: var(--text-b); line-height: 1.7; }
 .badge-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 0.75rem; margin-top: 1.5rem;
@@ -651,7 +657,7 @@ body::before {
     letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--primary); margin-bottom: 0.25rem;
 }
-.contact-item p { color: var(--text-mid); font-size: 0.88rem; line-height: 1.6; transition: color 0.3s; }
+.contact-item p { color: var(--text-mid); font-size: 0.97rem; line-height: 1.6; transition: color 0.3s; }
 .contact-item a { color: var(--primary); text-decoration: none; font-weight: 600; transition: color 0.2s; }
 .contact-item a:hover { color: var(--primary-dark); }
 
