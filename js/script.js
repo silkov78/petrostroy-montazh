@@ -75,7 +75,7 @@ function showNotification(message) {
         background:#d4920f; color:#0d0d0d;
         padding:0.9rem 1.4rem; border-radius:3px;
         box-shadow:0 8px 28px rgba(212,146,15,0.35);
-        z-index:9998; font-family:'Barlow Condensed',sans-serif;
+        z-index:9998; font-family:'Sora',sans-serif;
         font-weight:700; font-size:0.85rem;
         letter-spacing:0.05em; text-transform:uppercase;
         max-width:calc(100vw - 32px);

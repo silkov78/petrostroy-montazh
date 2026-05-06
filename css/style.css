@@ -46,7 +46,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Manrope', sans-serif;
     background-color: var(--bg);
     color: var(--text-mid);
     line-height: 1.6;
@@ -85,10 +85,10 @@ body::before {
     position: relative;
 }
 
-.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; cursor: pointer; }
 .logo-icon { font-size: 22px; line-height: 1; }
 .logo-text {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 1rem; font-weight: 700;
     letter-spacing: 0.03em; text-transform: uppercase;
     line-height: 1.2; color: var(--text-h); transition: color 0.3s;
@@ -169,7 +169,7 @@ body::before {
 .contact-btn {
     background-color: var(--primary); color: #0d0d0d;
     border: none; padding: 0.55rem 1.1rem; border-radius: 3px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-weight: 700; font-size: 0.8rem;
     letter-spacing: 0.1em; text-transform: uppercase;
     cursor: pointer; white-space: nowrap;
@@ -223,7 +223,7 @@ body::before {
 
 .hero-eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 0.72rem; font-weight: 600;
     letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--primary); margin-bottom: 1.1rem;
@@ -232,9 +232,9 @@ body::before {
 .hero-eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--primary); }
 
 .hero-left h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.8rem, 8vw, 5.5rem);
-    line-height: 0.95; letter-spacing: 0.02em;
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2.4rem, 7vw, 4.8rem);
+    line-height: 1.05; letter-spacing: -0.02em;
     color: var(--text-h); margin-bottom: 0;
     opacity: 0; animation: fadeUp 0.6s ease 0.35s forwards;
 }
@@ -246,7 +246,7 @@ body::before {
     opacity: 0; animation: fadeUp 0.6s ease 0.62s forwards;
 }
 .hero-tag {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 0.7rem; font-weight: 600;
     letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--text-b); border: 1px solid var(--border);
@@ -262,8 +262,8 @@ body::before {
 }
 .hero-val-item { display: flex; flex-direction: column; gap: 2px; }
 .hero-val-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem; letter-spacing: 0.03em;
+    font-family: 'Sora', sans-serif;
+    font-size: 2rem; letter-spacing: -0.01em;
     color: var(--primary); line-height: 1;
 }
 .hero-val-label {
@@ -293,9 +293,9 @@ body::before {
 
 .hero-about-label {
     display: block;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    letter-spacing: 0.06em;
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    letter-spacing: -0.01em;
     color: var(--text-h);
     margin-bottom: 1rem;
     line-height: 1;
@@ -339,10 +339,10 @@ body::before {
 }
 
 .thesis-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: clamp(1rem, 2vw, 1.2rem);
     font-weight: 700;
-    letter-spacing: 0.05em; text-transform: uppercase;
+    letter-spacing: 0.02em; text-transform: uppercase;
     color: var(--text-h); line-height: 1.1;
     transition: color 0.25s;
 }
@@ -355,7 +355,7 @@ body::before {
 .cta-btn {
     background-color: var(--primary); color: #0d0d0d;
     border: none; padding: 0.85rem 2rem; border-radius: 3px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 0.88rem; font-weight: 700;
     letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;
     transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
@@ -365,7 +365,7 @@ body::before {
     box-shadow: 0 8px 24px var(--primary-glow);
 }
 .cta-secondary {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 0.8rem; font-weight: 600;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--text-b); background: none; border: none;
@@ -394,7 +394,7 @@ body::before {
 
 .section-eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 0.7rem; font-weight: 600;
     letter-spacing: 0.25em; text-transform: uppercase;
     color: var(--primary); margin-bottom: 0.6rem;
@@ -402,9 +402,9 @@ body::before {
 .section-eyebrow::before { content: ''; width: 18px; height: 1px; background: var(--primary); }
 
 .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.2rem, 6vw, 3.8rem);
-    letter-spacing: 0.04em; color: var(--text-h); line-height: 1;
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2rem, 5.5vw, 3.4rem);
+    letter-spacing: -0.02em; color: var(--text-h); line-height: 1.05;
     transition: color 0.3s;
 }
 
@@ -458,12 +458,12 @@ body::before {
 }
 .service-card:hover .service-icon { transform: scale(1.12) translateY(-2px); }
 .service-card h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.98rem; font-weight: 700;
-    letter-spacing: 0.05em; text-transform: uppercase;
+    font-family: 'Sora', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    letter-spacing: 0.01em; text-transform: uppercase;
     margin-bottom: 0.4rem; color: var(--text-h); transition: color 0.3s;
 }
-.service-card p { color: var(--text-b); font-size: 0.95rem; line-height: 1.6; font-weight: 300; }
+.service-card p { color: var(--text-b); font-size: 1.07rem; line-height: 1.6; font-weight: 300; }
 
 /* ── Reviews ─────────────────────────────────── */
 .reviews {
@@ -529,15 +529,15 @@ body::before {
 .review-info { display: flex; flex-direction: column; gap: 5px; padding-top: 2px; }
 
 .review-company {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-weight: 700;
-    letter-spacing: 0.04em; text-transform: uppercase;
+    letter-spacing: 0.01em; text-transform: uppercase;
     color: var(--text-h); line-height: 1.2; transition: color 0.3s;
 }
 
 .review-date {
     display: inline-flex; align-items: center; gap: 7px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 0.68rem; font-weight: 600;
     letter-spacing: 0.22em; text-transform: uppercase; color: var(--primary);
 }
@@ -597,8 +597,8 @@ body::before {
 }
 .badge-icon { font-size: 3rem; margin-bottom: 1.25rem; display: block; }
 .badge-title {
-    font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem;
-    letter-spacing: 0.04em; color: var(--text-h); line-height: 1.1;
+    font-family: 'Sora', sans-serif; font-size: 1.6rem;
+    letter-spacing: -0.01em; color: var(--text-h); line-height: 1.15;
     margin-bottom: 0.75rem; transition: color 0.3s;
 }
 .badge-subtitle { font-size: 0.95rem; font-weight: 300; color: var(--text-b); line-height: 1.7; }
@@ -652,12 +652,12 @@ body::before {
 }
 .contact-item:hover::before { transform: scaleY(1); }
 .contact-item h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.68rem; font-weight: 600;
-    letter-spacing: 0.18em; text-transform: uppercase;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--primary); margin-bottom: 0.25rem;
 }
-.contact-item p { color: var(--text-mid); font-size: 0.97rem; line-height: 1.6; transition: color 0.3s; }
+.contact-item p { color: var(--text-mid); font-size: 1.07rem; line-height: 1.6; transition: color 0.3s; }
 .contact-item a { color: var(--primary); text-decoration: none; font-weight: 600; transition: color 0.2s; }
 .contact-item a:hover { color: var(--primary-dark); }
 
@@ -674,7 +674,7 @@ body::before {
 .contact-form input,
 .contact-form textarea {
     padding: 0.8rem 1rem; border: 1px solid var(--border);
-    border-radius: 3px; font-family: 'Barlow', sans-serif;
+    border-radius: 3px; font-family: 'Manrope', sans-serif;
     font-size: 0.9rem; font-weight: 300;
     color: var(--input-text); background-color: var(--input-bg);
     transition: border-color 0.25s, box-shadow 0.25s, background-color 0.3s, color 0.3s;
@@ -689,7 +689,7 @@ body::before {
 .submit-btn {
     background-color: var(--primary); color: #0d0d0d;
     border: none; padding: 0.9rem 1.5rem; border-radius: 3px;
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-family: 'Sora', sans-serif; font-weight: 700;
     font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase;
     cursor: pointer; margin-top: 0.25rem;
     transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
