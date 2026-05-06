@@ -6,16 +6,16 @@
     --primary-dark:   #b07a0a;
     --primary-glow:   rgba(212, 146, 15, 0.18);
 
-    --bg:          #141920;
-    --surface:     #1b2230;
-    --card:        #212c3a;
-    --card-hover:  #283447;
-    --border:      rgba(255,255,255,0.07);
+    --bg:          #1e2636;
+    --surface:     #253040;
+    --card:        #2c3a4e;
+    --card-hover:  #334457;
+    --border:      rgba(255,255,255,0.09);
     --text-h:      #f0f2f5;
-    --text-b:      #8c97a8;
+    --text-b:      #9aa5b4;
     --text-mid:    #c8d0da;
-    --navbar-bg:   rgba(20, 25, 32, 0.92);
-    --footer-bg:   #0e1218;
+    --navbar-bg:   rgba(30, 38, 54, 0.93);
+    --footer-bg:   #171f2e;
     --input-bg:    rgba(255,255,255,0.04);
     --input-text:  #c8d0da;
     --input-ph:    rgba(140,151,168,0.5);
@@ -414,7 +414,7 @@ body::before {
     position: relative; overflow: hidden; transition: background-color 0.3s;
 }
 .services::before {
-    content: 'УСЛУГИ'; position: absolute; top: 2rem; left: -2rem;
+    content: 'УСЛУГИ'; position: absolute; top: 2rem; right: -2rem;
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(6rem, 18vw, 13rem);
     color: var(--ghost-text); pointer-events: none;
@@ -603,7 +603,7 @@ body::before {
 
 /* ── Contact ─────────────────────────────────── */
 .contact {
-    padding: 4rem 0; background-color: var(--surface);
+    padding: 4rem 0; background-color: var(--bg);
     position: relative; overflow: hidden; transition: background-color 0.3s;
 }
 .contact::before {
