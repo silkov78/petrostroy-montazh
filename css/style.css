@@ -390,8 +390,8 @@ body::before {
 @media (min-width:768px) { .hero-scroll { display: flex; } }
 
 /* ── Section shared ──────────────────────────── */
-.section-header { margin-bottom: 2.5rem; }
-@media (min-width:768px) { .section-header { margin-bottom: 3.5rem; } }
+.section-header { margin-bottom: 1.5rem; }
+@media (min-width:768px) { .section-header { margin-bottom: 2rem; } }
 
 .section-eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
@@ -411,7 +411,7 @@ body::before {
 
 /* ── Services ────────────────────────────────── */
 .services {
-    padding: 4rem 0; background-color: var(--surface);
+    padding: 2.5rem 0 3rem; background-color: var(--surface);
     position: relative; overflow: hidden; transition: background-color 0.3s;
 }
 .services::before {
@@ -421,7 +421,7 @@ body::before {
     color: var(--ghost-text); pointer-events: none;
     letter-spacing: 0.05em; line-height: 1; user-select: none;
 }
-@media (min-width:768px) { .services { padding: 6rem 0; } }
+@media (min-width:768px) { .services { padding: 3rem 0 4rem; } }
 
 .services-grid {
     display: grid; grid-template-columns: 1fr;
@@ -434,11 +434,11 @@ body::before {
 
 .service-card {
     background-color: var(--card);
-    padding: 1.75rem 1.5rem;
+    padding: 1.1rem 1.25rem;
     position: relative; overflow: hidden;
     transition: background-color 0.25s;
 }
-@media (min-width:768px) { .service-card { padding: 2.25rem 2rem; } }
+@media (min-width:768px) { .service-card { padding: 1.35rem 1.5rem; } }
 .service-card::after {
     content: ''; position: absolute; bottom: 0; left: 0;
     width: 0; height: 2px; background: var(--primary);
@@ -448,23 +448,23 @@ body::before {
 .service-card:hover::after { width: 100%; }
 
 .service-num {
-    font-family: 'Bebas Neue', sans-serif; font-size: 3rem;
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem;
     color: rgba(212,146,15,0.1); line-height: 1;
-    margin-bottom: 0.75rem; display: block; transition: color 0.3s;
+    margin-bottom: 0.35rem; display: block; transition: color 0.3s;
 }
 .service-card:hover .service-num { color: rgba(212,146,15,0.22); }
 .service-icon {
-    font-size: 1.8rem; margin-bottom: 0.75rem;
+    font-size: 1.4rem; margin-bottom: 0.35rem;
     display: block; transition: transform 0.3s;
 }
 .service-card:hover .service-icon { transform: scale(1.12) translateY(-2px); }
 .service-card h3 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.05rem; font-weight: 700;
+    font-size: 0.98rem; font-weight: 700;
     letter-spacing: 0.05em; text-transform: uppercase;
-    margin-bottom: 0.6rem; color: var(--text-h); transition: color 0.3s;
+    margin-bottom: 0.4rem; color: var(--text-h); transition: color 0.3s;
 }
-.service-card p { color: var(--text-b); font-size: 0.88rem; line-height: 1.7; font-weight: 300; }
+.service-card p { color: var(--text-b); font-size: 0.82rem; line-height: 1.6; font-weight: 300; }
 
 /* ── About ───────────────────────────────────── */
 .about {
@@ -508,7 +508,7 @@ body::before {
     position: relative; overflow: hidden; transition: background-color 0.3s;
 }
 .contact::before {
-    content: 'КОНТАКТ'; position: absolute; top: 2rem; left: -2rem;
+    content: 'КОНТАКТЫ'; position: absolute; top: 2rem; left: -2rem;
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(6rem, 18vw, 13rem);
     color: var(--ghost-text); pointer-events: none;
