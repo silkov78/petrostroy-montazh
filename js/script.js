@@ -158,7 +158,7 @@ if (statsEl) statObserver.observe(statsEl);
 
     function startTimer() {
         clearInterval(timer);
-        timer = setInterval(() => goTo(current + 1), 6500);
+        timer = setInterval(() => goTo(current + 1), 11500);
     }
 
     btnPrev.addEventListener('click', () => { goTo(current - 1); startTimer(); });
